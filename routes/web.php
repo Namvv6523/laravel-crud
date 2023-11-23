@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DeviceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::view('master', 'Layouts.master');
+
+
+
+Route::prefix('admin')
+    ->as('admin.')
+    ->group(function () {
+        Route::view('dashboard', 'admin.dashboard')->name('dashboard');
+
+        // Route::resource('brands', BrandController::class);
+        // Route::resource('cars', CarController::class);
+    });
