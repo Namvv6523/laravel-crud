@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::view('master', 'Layouts.master');
 
-
+Route::resource('devices', DeviceController::class);
 
 Route::prefix('admin')
     ->as('admin.')
