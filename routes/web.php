@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,7 @@ Route::view('master', 'Layouts.master');
 
 Route::resource('devices', DeviceController::class);
 Route::resource('products', ProductController::class);
+Route::resource('students', StudentController::class);
 
 Route::prefix('admin')
     ->as('admin.')
