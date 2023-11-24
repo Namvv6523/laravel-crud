@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,7 @@ Route::get('/', function () {
 Route::view('master', 'Layouts.master');
 
 Route::resource('devices', DeviceController::class);
+Route::resource('products', ProductController::class);
 
 Route::prefix('admin')
     ->as('admin.')

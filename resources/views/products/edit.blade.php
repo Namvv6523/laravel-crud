@@ -6,13 +6,13 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h3 class="mb-0">Device</h3>
+                        <h3 class="mb-0">Product</h3>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-end">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                Device
+                                Product
                             </li>
                         </ol>
                     </div>
@@ -25,7 +25,7 @@
                     <div class="col-md-12">
                         <div class="card card-primary card-outline mb-4">
                             <div class="card-header">
-                                <div class="card-title">Tạo mới</div>
+                                <div class="card-title">Create New</div>
                             </div>
 
                             <div class="card-body">
@@ -45,23 +45,23 @@
                                     </div>
                                 @endif
 
-                                <form action="{{ route('devices.store') }}" method="post" enctype="multipart/form-data">
+                                <form action="{{ route('products.update', $product) }}" method="post" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="mx-auto w-50 mt-3">
                                         <label for="name">Name</label>
-                                        <input type="text" name="name" id="name" class="form-control">
+                                        <input type="text" name="name" id="name" class="form-control" value="{{ $product->name }}">
                                     </div>
 
                                     <div class="mx-auto w-50 mt-3">
-                                        <label for="serial">Serial</label>
-                                        <input type="text" name="serial" id="serial" class="form-control">
+                                        <label for="price">Price</label>
+                                        <input type="text" name="price" id="price" class="form-control" value="{{ $product->price }}">
                                     </div>
 
 
                                     <div class="mx-auto w-50 mt-3">
-                                        <label for="model">Model</label>
-                                        <input type="text" name="model" id="model" class="form-control">
+                                        <label for="price_sale">Price_sale</label>
+                                        <input type="text" name="price_sale" id="price_sale" class="form-control" value="{{ $product->price_sale }}">
                                     </div>
 
                                     <div class="mx-auto w-50 mt-3">
@@ -72,20 +72,23 @@
                                     <div class="mx-auto w-50 mt-3">
                                         <label for="is_active">Is Active</label>
                                         <select name="is_active" id="is_active" class="form-control">
-                                            <option value="1">Active</option>
-                                            <option value="0">Inactive</option>
+                                            <option @if ($product->is_active)
+                                                selected
+                                            @endif value="1">Active</option>
+                                            <option @if ($product->is_active)
+                                                selected
+                                            @endif value="0">Inactive</option>
                                         </select>
                                     </div>
 
                                     <div class="mx-auto w-50 mt-3">
                                         <label for="desctibe">Describe</label>
-                                        <textarea name="describe" id="describe" class="form-control"></textarea>
+                                        <textarea name="describe" id="describe" class="form-control" value="{{ $product->describe }}"></textarea>
                                     </div>
 
 
-
                                     <div class="d-flex justify-content-center mt-3">
-                                        <a href="{{ route('devices.index') }}" class="btn btn-warning me-2">Về trang
+                                        <a href="{{ route('products.index') }}" class="btn btn-warning me-2">Back to
                                             list</a>
                                         <button type="submit" class="btn btn-success">Save</button>
                                     </form>
