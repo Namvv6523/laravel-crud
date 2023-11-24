@@ -21,10 +21,10 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item"><a href="" class="nav-link"><i class="nav-icon bi bi-circle"></i>
+                        <li class="nav-item"><a href="{{ route('admin.brands.index') }}" class="nav-link"><i class="nav-icon bi bi-circle"></i>
                                 <p>List Brand</p>
                             </a></li>
-                        <li class="nav-item"><a href="" class="nav-link"><i class="nav-icon bi bi-circle"></i>
+                        <li class="nav-item"><a href="{{ route('admin.brands.create') }}" class="nav-link"><i class="nav-icon bi bi-circle"></i>
                                 <p>Create New</p>
                             </a></li>
                     </ul>
@@ -98,22 +98,7 @@
                     </ul>
                 </li>
 
-                {{-- Food --}}
-                <li class="nav-item"><a href="#" class="nav-link"><i class="fa-brands fa-product-hunt"></i>
-                        <p>
-                            Food
-                            <i class="nav-arrow bi bi-chevron-right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item"><a href="" class="nav-link"><i class="nav-icon bi bi-circle"></i>
-                                <p>List Fodd</p>
-                            </a></li>
-                        <li class="nav-item"><a href="" class="nav-link"><i class="nav-icon bi bi-circle"></i>
-                                <p>Add New</p>
-                            </a></li>
-                    </ul>
-                </li>
+                
             </ul>
         </nav>
     </div>
