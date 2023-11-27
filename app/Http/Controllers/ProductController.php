@@ -79,7 +79,7 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         $request->validate([
-            'name' => 'required|max:100|unique:products',
+            'name' => 'required|max:100|unique:products' ,
             'price' => 'decimal:2',
             'price_sale' => 'nullable|decimal:2',
             'img' => 'nullable|image|max:255',

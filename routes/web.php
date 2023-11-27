@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\CarController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StudentController;
@@ -40,6 +41,6 @@ Route::prefix('admin')
         // Route::get('brands/{id}/edit', [BrandController::class, 'edit'])->name('brands.edit');
         // Route::put('brands/{id}', [BrandController::class, 'update'])->name('brands.update');
         // Route::delete('brands/{id}', [BrandController::class, 'delete'])->name('brands.delete');
-        // Route::resource('cars', CarController::class);
+        Route::resource('cars', CarController::class);
         Route::resource('brands', BrandController::class);
     });

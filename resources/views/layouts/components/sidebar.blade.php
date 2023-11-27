@@ -38,10 +38,10 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item"><a href="" class="nav-link"><i class="nav-icon bi bi-circle"></i>
+                        <li class="nav-item"><a href="{{ route('admin.cars.index') }}" class="nav-link"><i class="nav-icon bi bi-circle"></i>
                                 <p>List Car</p>
                             </a></li>
-                        <li class="nav-item"><a href="" class="nav-link"><i class="nav-icon bi bi-circle"></i>
+                        <li class="nav-item"><a href="{{ route('admin.cars.create') }}" class="nav-link"><i class="nav-icon bi bi-circle"></i>
                                 <p>Add New</p>
                             </a></li>
                     </ul>
